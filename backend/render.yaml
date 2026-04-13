@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: veratine-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GOOGLE_CLIENT_ID
+        value: 285803763173-fc3lqb4e2ev7kld0nao3571cenfje407.apps.googleusercontent.com

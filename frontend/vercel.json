@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api-proxy/:path*", "destination": "https://veratine.onrender.com/:path*" },
+    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+  ]
+}

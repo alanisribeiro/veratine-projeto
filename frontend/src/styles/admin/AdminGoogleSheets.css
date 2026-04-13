@@ -1,0 +1,413 @@
+/* =========================================
+   ADMIN GOOGLE SHEETS PAGE
+   ========================================= */
+
+.gsheets-page {
+  width: 100%;
+}
+
+.gsheets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.gsheets-header .admin-page-title {
+  margin: 0;
+}
+
+.gsheets-loading {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--theme-text-secondary);
+}
+
+/* Sync Button */
+.gsheets-sync-btn {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #34a853, #2D8A7B);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.gsheets-sync-btn:hover {
+  opacity: 0.9;
+}
+
+.gsheets-sync-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Message */
+.gsheets-message {
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.gsheets-message.success {
+  background: rgba(45, 138, 123, 0.1);
+  color: #2D8A7B;
+  border: 1px solid rgba(45, 138, 123, 0.2);
+}
+
+.gsheets-message.error {
+  background: rgba(255, 68, 68, 0.1);
+  color: #FF4444;
+  border: 1px solid rgba(255, 68, 68, 0.2);
+}
+
+/* Status Cards */
+.gsheets-status-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.gsheets-status-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: 12px;
+}
+
+.gsheets-status-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.gsheets-status-card strong {
+  font-size: 0.85rem;
+  color: var(--theme-text);
+}
+
+.gsheets-status-card span:not(.gsheets-status-icon) {
+  font-size: 0.78rem;
+  color: var(--theme-text-secondary);
+  margin-top: 2px;
+}
+
+.gsheets-status-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.gsheets-status-card.ok .gsheets-status-icon {
+  background: rgba(45, 138, 123, 0.15);
+  color: #2D8A7B;
+}
+
+.gsheets-status-card.warning .gsheets-status-icon {
+  background: rgba(255, 170, 0, 0.15);
+  color: #cc8800;
+}
+
+.gsheets-status-card.neutral .gsheets-status-icon {
+  background: rgba(150, 150, 150, 0.15);
+  color: var(--theme-text-secondary);
+}
+
+/* Cards */
+.gsheets-card {
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.gsheets-card h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.05rem;
+  color: var(--theme-text);
+}
+
+/* Setup Guide */
+.gsheets-setup ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.gsheets-setup li {
+  margin-bottom: 12px;
+  color: var(--theme-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.gsheets-setup code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--theme-primary);
+}
+
+/* Form Fields */
+.gsheets-field {
+  margin-bottom: 20px;
+}
+
+.gsheets-field > label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--theme-text);
+  margin-bottom: 8px;
+}
+
+.gsheets-field small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--theme-text-secondary);
+  margin-top: 6px;
+}
+
+.gsheets-input,
+.gsheets-select {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--theme-bg);
+  border: 1px solid var(--theme-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--theme-text);
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.gsheets-input:focus,
+.gsheets-select:focus {
+  outline: none;
+  border-color: var(--theme-primary);
+}
+
+.gsheets-service-email {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gsheets-service-email code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--theme-primary);
+  word-break: break-all;
+  user-select: all;
+}
+
+.gsheets-service-email small {
+  margin-top: 0;
+}
+
+/* Checkboxes */
+.gsheets-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gsheets-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border: 1px solid var(--theme-border);
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.gsheets-checkbox:hover {
+  border-color: var(--theme-primary);
+}
+
+.gsheets-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2D8A7B;
+  cursor: pointer;
+}
+
+.gsheets-checkbox span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--theme-text);
+}
+
+.gsheets-checkbox small {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--theme-text-secondary);
+  margin-top: 0;
+}
+
+/* Toggle */
+.gsheets-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gsheets-toggle-row > span {
+  font-size: 0.9rem;
+  color: var(--theme-text-secondary);
+}
+
+.gsheets-toggle {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.gsheets-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.gsheets-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--theme-border);
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.gsheets-toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.gsheets-toggle input:checked + .gsheets-toggle-slider {
+  background-color: #2D8A7B;
+}
+
+.gsheets-toggle input:checked + .gsheets-toggle-slider::before {
+  transform: translateX(22px);
+}
+
+/* Save Button */
+.gsheets-save-btn {
+  padding: 12px 32px;
+  background: var(--theme-primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 8px;
+}
+
+.gsheets-save-btn:hover {
+  opacity: 0.9;
+}
+
+.gsheets-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Result Grid */
+.gsheets-result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.gsheets-result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px;
+  background: rgba(45, 138, 123, 0.05);
+  border-radius: 8px;
+}
+
+.gsheets-result-item strong {
+  font-size: 0.85rem;
+  color: var(--theme-primary);
+}
+
+.gsheets-result-item span {
+  font-size: 0.8rem;
+  color: var(--theme-text-secondary);
+}
+
+.gsheets-sync-time {
+  color: var(--theme-text-secondary);
+}
+
+/* Error Card */
+.gsheets-error-card {
+  border-color: rgba(255, 68, 68, 0.3);
+}
+
+.gsheets-error-card h3 {
+  color: #FF4444;
+}
+
+.gsheets-error-card p {
+  color: var(--theme-text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 8px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .gsheets-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .gsheets-status-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gsheets-checkbox {
+    flex-wrap: wrap;
+  }
+
+  .gsheets-checkbox small {
+    margin-left: 28px;
+    width: 100%;
+  }
+}

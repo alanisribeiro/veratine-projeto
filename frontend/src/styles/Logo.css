@@ -1,0 +1,121 @@
+/* Logo Component Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--primary-green, #2D8A7B);
+  flex-shrink: 0;
+}
+
+/* Size Variants */
+.logo-small .logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-medium .logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-large .logo-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.logo-xlarge .logo-icon {
+  width: 64px;
+  height: 64px;
+}
+
+/* Logo Text */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.logo-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #9e8b7f;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Variant: Icon Only */
+.logo-icon-only {
+  gap: 0;
+}
+
+.logo-icon-only .logo-text {
+  display: none;
+}
+
+/* Variant: Text Only */
+.logo-text-only {
+  gap: 0;
+}
+
+.logo-text-only .logo-icon {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-name {
+    font-size: 20px;
+  }
+
+  .logo-tagline {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-name {
+    font-size: 18px;
+  }
+
+  .logo-tagline {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .logo-container {
+    gap: 8px;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .logo-name {
+    color: #f5f0eb;
+  }
+
+  .logo-tagline {
+    color: #d9c9bc;
+  }
+}

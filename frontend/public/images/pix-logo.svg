@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Top diamond -->
+  <rect x="37" y="5" width="26" height="26" rx="4" transform="rotate(45 50 18)" fill="#32BCAD"/>
+  <!-- Right diamond -->
+  <rect x="69" y="37" width="26" height="26" rx="4" transform="rotate(45 82 50)" fill="#32BCAD"/>
+  <!-- Bottom diamond -->
+  <rect x="37" y="69" width="26" height="26" rx="4" transform="rotate(45 50 82)" fill="#32BCAD"/>
+  <!-- Left diamond -->
+  <rect x="5" y="37" width="26" height="26" rx="4" transform="rotate(45 18 50)" fill="#32BCAD"/>
+</svg>

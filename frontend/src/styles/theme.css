@@ -1,0 +1,208 @@
+/* =========================================
+   VERATINE THEME SYSTEM
+   Dark mode via CSS custom properties
+   ========================================= */
+
+:root {
+  /* === Surface / Background === */
+  --theme-bg: #faf8f5;
+  --theme-bg-alt: #f5f2ed;
+  --theme-surface: #ffffff;
+  --theme-surface-hover: #faf8f5;
+  --theme-surface-elevated: #ffffff;
+
+  /* === Text === */
+  --theme-text: #2c2c2c;
+  --theme-text-secondary: #6a6a6a;
+  --theme-text-muted: #9e8b7f;
+  --theme-text-faint: #c4b8ac;
+
+  /* === Borders === */
+  --theme-border: #e8dfd7;
+  --theme-border-light: #f0ebe5;
+  --theme-border-hover: #d4c8bc;
+
+  /* === Brand colors (remain constant) === */
+  --theme-primary: #6b5b4a;
+  --theme-primary-dark: #4a3f35;
+  --theme-primary-light: #9e8b7f;
+  --theme-accent-rose: #d4a5a5;
+  --theme-accent-peach: #e8b4a8;
+  --theme-accent-cream: #f5e6dc;
+  --theme-accent-gold: #d4a574;
+
+  /* === Components === */
+  --theme-card-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  --theme-card-shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.1);
+  --theme-header-bg: linear-gradient(135deg, #faf8f5 0%, #f9f6f2 100%);
+  --theme-header-shadow: 0 4px 12px rgba(107, 91, 74, 0.08);
+  --theme-input-bg: #ffffff;
+  --theme-input-border: #e8dfd7;
+  --theme-input-focus-shadow: 0 0 0 3px rgba(107, 91, 74, 0.1);
+  --theme-overlay: rgba(0, 0, 0, 0.5);
+  --theme-placeholder: #aaaaaa;
+
+  /* === Status colors === */
+  --theme-success-bg: #e8f5e9;
+  --theme-success-text: #2e7d32;
+  --theme-error-bg: #ffebee;
+  --theme-error-text: #c62828;
+  --theme-warning-bg: #f5ebe0;
+  --theme-warning-text: #8b6914;
+
+  /* === Footer === */
+  --theme-footer-bg: linear-gradient(180deg, #2c2c2c 0%, #1a1a1a 100%);
+  --theme-footer-text: #e8e0d8;
+  --theme-footer-muted: #9e8b7f;
+  --theme-footer-dim: #6a6058;
+
+  /* === Bottom Nav === */
+  --theme-bottomnav-bg: #ffffff;
+  --theme-bottomnav-border: #e8dfd7;
+  --theme-bottomnav-shadow: 0 -2px 8px rgba(107, 91, 74, 0.08);
+
+  /* === Image placeholder === */
+  --theme-img-placeholder: #f5f0eb;
+
+  /* === Scrolled header === */
+  --theme-header-scrolled-bg: rgba(250, 248, 245, 0.95);
+
+  /* === Quantity / misc === */
+  --theme-quantity-bg: #faf8f5;
+
+  /* === Modal === */
+  --theme-modal-bg: #ffffff;
+
+  /* === Coupon button === */
+  --theme-coupon-btn-bg: #1a1a1a;
+  --theme-coupon-btn-text: #ffffff;
+
+  /* === Filter pill active === */
+  --theme-pill-active-bg: #6b5b4a;
+  --theme-pill-active-text: #ffffff;
+
+  /* === Discount badge === */
+  --theme-badge-bg: #2c2c2c;
+
+  /* === Guest banner === */
+  --theme-guest-bg: linear-gradient(135deg, #f5e6dc 0%, #f0dfd2 100%);
+  --theme-guest-text: #6b5b4a;
+  --theme-guest-border: #e8dfd7;
+}
+
+/* =========================================
+   DARK THEME
+   ========================================= */
+[data-theme="dark"] {
+  /* === Surface / Background === */
+  --theme-bg: #121212;
+  --theme-bg-alt: #1a1a1a;
+  --theme-surface: #1e1e1e;
+  --theme-surface-hover: #252525;
+  --theme-surface-elevated: #242424;
+
+  /* === Text === */
+  --theme-text: #e8e0d8;
+  --theme-text-secondary: #b0a89e;
+  --theme-text-muted: #8a7f74;
+  --theme-text-faint: #5a524a;
+
+  /* === Borders === */
+  --theme-border: #333028;
+  --theme-border-light: #2a2620;
+  --theme-border-hover: #4a4238;
+
+  /* === Brand colors shift === */
+  --theme-primary: #c4a882;
+  --theme-primary-dark: #a88e6e;
+  --theme-primary-light: #8a7f74;
+  --theme-accent-cream: #2e2820;
+
+  /* === Components === */
+  --theme-card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --theme-card-shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.4);
+  --theme-header-bg: linear-gradient(135deg, #1a1a1a 0%, #151515 100%);
+  --theme-header-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --theme-input-bg: #1e1e1e;
+  --theme-input-border: #333028;
+  --theme-input-focus-shadow: 0 0 0 3px rgba(196, 168, 130, 0.15);
+  --theme-overlay: rgba(0, 0, 0, 0.7);
+  --theme-placeholder: #5a524a;
+
+  /* === Status colors === */
+  --theme-success-bg: #1a2e1a;
+  --theme-success-text: #6abf6a;
+  --theme-error-bg: #2e1a1a;
+  --theme-error-text: #e57373;
+  --theme-warning-bg: #2e2818;
+  --theme-warning-text: #c4a060;
+
+  /* === Footer === */
+  --theme-footer-bg: linear-gradient(180deg, #0e0e0e 0%, #080808 100%);
+  --theme-footer-text: #c0b8ae;
+  --theme-footer-muted: #6a6058;
+  --theme-footer-dim: #4a4238;
+
+  /* === Bottom Nav === */
+  --theme-bottomnav-bg: #1a1a1a;
+  --theme-bottomnav-border: #2a2620;
+  --theme-bottomnav-shadow: 0 -2px 8px rgba(0, 0, 0, 0.4);
+
+  /* === Image placeholder === */
+  --theme-img-placeholder: #252220;
+
+  /* === Scrolled header === */
+  --theme-header-scrolled-bg: rgba(26, 26, 26, 0.95);
+
+  /* === Quantity / misc === */
+  --theme-quantity-bg: #252220;
+
+  /* === Modal === */
+  --theme-modal-bg: #1e1e1e;
+
+  /* === Coupon button === */
+  --theme-coupon-btn-bg: #c4a882;
+  --theme-coupon-btn-text: #121212;
+
+  /* === Filter pill active === */
+  --theme-pill-active-bg: #c4a882;
+  --theme-pill-active-text: #121212;
+
+  /* === Discount badge === */
+  --theme-badge-bg: #c4a882;
+
+  /* === Guest banner === */
+  --theme-guest-bg: linear-gradient(135deg, #2e2820 0%, #252018 100%);
+  --theme-guest-text: #c4a882;
+  --theme-guest-border: #333028;
+}
+
+/* =========================================
+   GLOBAL THEME APPLICATION
+   ========================================= */
+html {
+  background-color: var(--theme-bg);
+  color-scheme: light;
+}
+
+[data-theme="dark"] html,
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+
+/* Smooth transition on theme change */
+html, body,
+.header, .bottom-nav, .footer,
+.product-card, .cart-item, .cart-summary,
+.account-section, .account-profile-header,
+.login-modal-content, .auth-card,
+.fd-page, .fd-header-scrolled,
+.filter-search, .search-advanced,
+.admin-sidebar, .admin-header {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
