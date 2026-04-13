@@ -70,7 +70,7 @@ Uma aplicação full-stack desenvolvida para comercializar flores e plantas onli
 - Sincronização com backend (quando logado)
 
 ---
-🎯 Funcionalidades (AC2 - 12/04/2026)
+## 🎯 Funcionalidades (AC2 - 12/04/2026)
 
 ## 🔍 Busca Avançada e Filtros
 - Busca por nome de produto em tempo real
