@@ -123,7 +123,7 @@ Uma aplicação full-stack desenvolvida para comercializar flores e plantas onli
 - Suporte a cupons de desconto no checkout
 - Confirmação visual de pagamento bem-sucedido
   
-##👤 Gerenciamento de Usuário
+## 👤 Gerenciamento de Usuário
 
 Perfil do Usuário:
 - Avatar com iniciais como fallback
