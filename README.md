@@ -156,7 +156,87 @@ Notificações:
 - Preferências de tipo (pedidos, promoções, newsletter)
 - Status salvo em localStorage
 
+## 🎯 Funcionalidades (AC3 - 10/05/2026)
 
+##  Dashboard Administrativo
+- Painel de Controle Principal:
+- Visão geral com KPIs (total de vendas, pedidos, clientes)
+- Gráficos de analytics (30 e 90 dias)
+- Revenue por período com visualização temporal
+- Top 5 produtos mais vendidos
+- Breakdown de vendas por categoria
+- Segmentação de clientes (por período)
+- Tendências e insights de vendas
+- Interface responsiva e intuitiva
+
+##  Gerenciamento de produtos
+- CRUD Completo:
+- Criar novo produto (nome, descrição, preço, categoria)
+- Editar informações de produtos existentes
+- Deletar produtos com confirmação
+- Visualizar lista completa com paginação
+
+##  Controle de Estoque
+- Visualizar quantidade em estoque
+- Atualizar quantidade disponível
+- Alertas de estoque baixo
+- Status de disponibilidade
+- Gerenciamento de Imagens
+- Upload de imagem do produto
+- Preview antes de salvar
+- Validação de formato
+- Funcionalidades Avançadas
+- Busca e filtros por nome, categoria, preço
+  Ordenação (nome, preço, data, popularidade)
+ Bulk actions (editar múltiplos produtos)
+ Importação/exportação de dados (CSV)
+
+##  Gerenciamento de Pedidos
+- Visualização de Pedidos:
+- Lista completa de todos os pedidos
+- Filtros por data, cliente, status
+- Paginação para melhor navegação
+- Busca por ID do pedido
+- Status de Pedidos
+- Informações do cliente (nome, email, telefone)
+- Endereço de entrega
+- Itens do pedido (produto, quantidade, preço)
+- Total do pedido
+- Método de pagamento utilizado
+- Visualizar detalhes completos
+- Editar status
+- Cancelar pedido (se necessário)
+
+## Gerenciamento de Clientes
+- Base de Clientes
+- Lista de todos os clientes registrados
+- Filtros por período de cadastro, país, status
+- Busca por nome ou email
+- Paginação
+- Nome e email
+- Todos os pedidos do cliente
+- Total gasto (Lifetime Value)
+- Primeira e última compra
+- Produtos favoritos
+- Frequência de compra
+- Visualizar perfil completo
+- Histórico de pedidos
+- Endereços cadastrados
+- Enviar mensagem/contato
+
+##  Gerenciamento de Categorias
+- CRUD de Categorias
+- Criar nova categoria
+- Editar nome e descrição
+- Deletar categoria (se sem produtos)
+- Visualizar lista
+- Reordenar categorias (drag & drop)
+- Ativar/desativar categoria
+- Número de produtos por categoria
+- Visualizar produtos da categoria
+- Não permitir duplicatas
+- Mensagens de erro claras
+- Confirmação antes de deletar
 
 ## 📊 Checklist AC1
 
@@ -176,5 +256,14 @@ Notificações:
 - [x] Meio de pagamento - PIX / Cartão
 - [x] Usuário - Editar / Endereço / Pedidos / Notificações
 
+## 📊 Checklist AC3
+
+- [x] Dashboard Administrativo
+- [x] Gerenciamento de produtos
+- [x] Controle de Estoque
+- [x]Gerenciamento de pedidos
+- [x] Gerenciamento de Clientes
+- [x] Gerenciamento de Categorias
+- [x] Gerenciamento de Imagens 
 
 **Desenvolvido por Alanis Ribeiro**
